@@ -1,0 +1,42 @@
+<div class="jumbotron">
+<h1 class="display-4 text-s">学習記録アプリ</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>学習した内容</th>
+      <th>備考</th>
+      <th>進捗率</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studies.each do |study| %>
+      <tr>
+        <td width="200px"><%= study.date %></td>
+        <td width="200px"><%= study.title %></td>
+        <td width="300px"><%= study.memo %></td>
+        <td width="100px"><%= study.status %>％</td>
+        <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+        <td width="150px">
+        <button type="button" class="btn btn-outline-success">
+          <%= link_to '編集する',study, method: :edit %>
+        </button>
+        </td>
+        <td width="150px">
+        <button type="button" class="btn btn-outline-danger">
+          <%= link_to '削除する',study, method: :delete %>
+        </button>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<button type="button" class="btn btn-warning">
+  <%= link_to '新しい学習項目を追加する', new_study_path %>
+</button>
+</div>

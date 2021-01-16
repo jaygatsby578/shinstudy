@@ -1,0 +1,23 @@
+<h1 class="display-4 text-primary">新しく学習内容を記録する</h1>
+
+<%= form_for(@study, rul:{controller:'studies',action:'new'}) do |form| %>
+    <div class="form-group">
+        <label for="date">日付</title>
+        <%= form.text_field :date,{class:"form-control"} %>
+    </div>
+    <div class="form-group">
+        <label for="title">学習した内容</title>
+        <%= form.text_field :title,{class:"form-control"} %>
+    </div>
+    <div class="form-group">
+        <label for="memo">備考</title>
+        <%= form.text_area :memo,{class:"form-control"} %>
+    </div>
+    <div class="form-group">
+        <label for="title">進捗率</title>
+        <%= form.text_field :status,{class:"form-control"} %>
+    </div>
+    <%= form.submit "保存する" %>
+<% end %>
+
+<p class="link"><a href="/studies">&lt;&lt; ※トップページに戻る</a></p>

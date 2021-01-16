@@ -1,0 +1,28 @@
+<h1 class="display-4 text-primary"><%= @board_user.nickname %></h1>
+
+<table class="table">
+<tr>
+  <h1>Nickname</h1>
+  <td><%= @board_user.nickname %></td>
+</tr>
+
+<tr>
+  <th>Id</th>
+  <td><%= @board_user.id %></td>
+</tr>
+
+<tr>
+  <th>Created at</th>
+  <td><%= @board_user.created at %></td>
+</tr>
+
+<tr>
+  <th>Memo</th>
+  <%= @board_user.memo %>
+</tr>
+</table>
+
+<hr>
+<%= link_to '<<Back', controller: :board_messages %>
+<hr>
+<div>copyright SYODA-Tuyano 2020.</div>
