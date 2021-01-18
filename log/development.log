@@ -3461,3 +3461,472 @@ Processing by StudiesController#index as HTML
 Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.2ms | Allocations: 6099)
 
 
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:05:10 +0000
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 218)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/webpacker-5.2.1/lib/webpacker/webpack_runner.rb:23:in `exec': Permission denied - /home/ubuntu/shinstudy/node_modules/.bin/webpack (Errno::EACCES)
+	from /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/webpacker-5.2.1/lib/webpacker/webpack_runner.rb:23:in `block in run'
+	from /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/webpacker-5.2.1/lib/webpacker/webpack_runner.rb:22:in `chdir'
+	from /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/webpacker-5.2.1/lib/webpacker/webpack_runner.rb:22:in `run'
+	from /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/webpacker-5.2.1/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 1500.3ms | Allocations: 36479)
+Completed 200 OK in 1518ms (Views: 1503.6ms | ActiveRecord: 0.0ms | Allocations: 39612)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:05:26 +0000
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 35)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3206)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 3593)
+
+
+Started GET "/studies" for 127.0.0.1 at 2021-01-18 15:05:33 +0000
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 5368)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 8540)
+Completed 200 OK in 29ms (Views: 24.9ms | ActiveRecord: 1.5ms | Allocations: 9769)
+
+
+Started GET "/studies/new" for 127.0.0.1 at 2021-01-18 15:05:55 +0000
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 17.6ms | Allocations: 3264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 6348)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 6889)
+
+
+Started GET "/studies" for 127.0.0.1 at 2021-01-18 15:05:57 +0000
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1018)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 4186)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.4ms | Allocations: 4602)
+
+
+Started GET "/studies" for 127.0.0.1 at 2021-01-18 15:06:15 +0000
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1023)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4191)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 4609)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:08:06 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.0ms | Allocations: 25756)
+Completed 200 OK in 71ms (Views: 61.8ms | ActiveRecord: 0.0ms | Allocations: 28523)
+
+
+Started GET "/studies" for 127.0.0.1 at 2021-01-18 15:08:13 +0000
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 5393)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 8702)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 1.1ms | Allocations: 9939)
+
+
+Started GET "/studies" for 127.0.0.1 at 2021-01-18 15:08:32 +0000
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1175)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 5215)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.3ms | Allocations: 5687)
+
+
+Started GET "/studies" for 127.0.0.1 at 2021-01-18 15:08:42 +0000
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 5499)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 12046)
+Completed 200 OK in 42ms (Views: 29.0ms | ActiveRecord: 1.0ms | Allocations: 15021)
+
+
+Started GET "/studies" for 127.0.0.1 at 2021-01-18 15:09:34 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 5479)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.8ms | Allocations: 30396)
+Completed 200 OK in 77ms (Views: 68.6ms | ActiveRecord: 0.7ms | Allocations: 33356)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:14:11 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 218)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/ubuntu/shinstudy/public/packs
+[Webpacker] Hash: df5056ad4d704dddd9be
+Version: webpack 4.46.0
+Time: 8693ms
+Built at: 01/18/2021 3:14:23 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bbeea1c82e8963b2d6ca.js   1.31 MiB  application  [emitted] [immutable]  application
+js/application-bbeea1c82e8963b2d6ca.js.map   1.44 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bbeea1c82e8963b2d6ca.js js/application-bbeea1c82e8963b2d6ca.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 549 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/stylesheets/application.scss 665 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 11114.5ms | Allocations: 9427)
+Completed 200 OK in 11126ms (Views: 11117.8ms | ActiveRecord: 0.0ms | Allocations: 12195)
+
+
+Started GET "/studies" for 127.0.0.1 at 2021-01-18 15:14:32 +0000
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 5368)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 155.4ms | Allocations: 20211)
+Completed 200 OK in 160ms (Views: 156.2ms | ActiveRecord: 1.3ms | Allocations: 21424)
+
+
+Started GET "/studies" for 127.0.0.1 at 2021-01-18 15:14:50 +0000
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1023)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 4186)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.3ms | Allocations: 4610)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:15:02 +0000
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 35)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3200)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 3578)
+
+
+Started GET "/studies" for 127.0.0.1 at 2021-01-18 15:15:08 +0000
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1015)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4193)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 4607)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:20:25 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 470.0ms | Allocations: 135965)
+Completed 200 OK in 484ms (Views: 473.9ms | ActiveRecord: 0.0ms | Allocations: 138731)
+
+
+Started GET "/img/home-bg.jpg" for 127.0.0.1 at 2021-01-18 15:20:26 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/img/home-bg.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:25:04 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 455.6ms | Allocations: 125169)
+Completed 200 OK in 466ms (Views: 458.5ms | ActiveRecord: 0.0ms | Allocations: 127935)
+
+
+Started GET "/img/home-bg.jpg" for 127.0.0.1 at 2021-01-18 15:25:05 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/img/home-bg.jpg"):
+  
+Started GET "/img/home-bg.jpg" for 127.0.0.1 at 2021-01-18 15:25:58 +0000
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:25:58 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/img/home-bg.jpg"):
+  
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 298)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 156.2ms | Allocations: 60429)
+Completed 200 OK in 174ms (Views: 161.2ms | ActiveRecord: 0.0ms | Allocations: 63753)
+
+
+Started GET "/simpleoffice.jpg" for 127.0.0.1 at 2021-01-18 15:25:58 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/simpleoffice.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:26:32 +0000
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 5977)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 7163)
+
+
+Started GET "/simpleoffice.jpg" for 127.0.0.1 at 2021-01-18 15:26:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/simpleoffice.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:26:33 +0000
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 35)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 5601)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 5980)
+
+
+Started GET "/simpleoffice.jpg" for 127.0.0.1 at 2021-01-18 15:26:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/simpleoffice.jpg"):
+  
+Started GET "/simpleoffice.jpg" for 127.0.0.1 at 2021-01-18 15:26:58 +0000
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:26:58 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/simpleoffice.jpg"):
+  
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 88.0ms | Allocations: 27704)
+Completed 200 OK in 96ms (Views: 91.1ms | ActiveRecord: 0.0ms | Allocations: 29840)
+
+
+Started GET "/studies" for 127.0.0.1 at 2021-01-18 15:27:29 +0000
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 5452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 10946)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 1.1ms | Allocations: 12222)
+
+
+Started GET "/simpleoffice.jpg" for 127.0.0.1 at 2021-01-18 15:27:29 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/simpleoffice.jpg"):
+  
+Started GET "/studies" for 127.0.0.1 at 2021-01-18 15:28:27 +0000
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1299)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 7092)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.3ms | Allocations: 8329)
+
+
+Started GET "/simpleoffice.jpg" for 127.0.0.1 at 2021-01-18 15:28:50 +0000
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:28:50 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/simpleoffice.jpg"):
+  
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 485)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 188.0ms | Allocations: 63895)
+Completed 200 OK in 243ms (Views: 235.6ms | ActiveRecord: 0.0ms | Allocations: 78289)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:31:05 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 71.5ms | Allocations: 27872)
+Completed 200 OK in 82ms (Views: 74.1ms | ActiveRecord: 0.0ms | Allocations: 30639)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:32:42 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 436.6ms | Allocations: 129844)
+Completed 200 OK in 447ms (Views: 439.7ms | ActiveRecord: 0.0ms | Allocations: 132610)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:36:27 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 84.7ms | Allocations: 27873)
+Completed 200 OK in 95ms (Views: 87.5ms | ActiveRecord: 0.0ms | Allocations: 30640)
+
+
+Started GET "/studies" for 127.0.0.1 at 2021-01-18 15:36:31 +0000
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 5365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 10903)
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 1.3ms | Allocations: 12119)
+
+
+Started GET "/hello" for 127.0.0.1 at 2021-01-18 15:36:35 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/hello"):
+  
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:37:37 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 76.6ms | Allocations: 27820)
+Completed 200 OK in 87ms (Views: 79.4ms | ActiveRecord: 0.0ms | Allocations: 30586)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-18 15:38:30 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 77.0ms | Allocations: 27884)
+Completed 200 OK in 87ms (Views: 79.7ms | ActiveRecord: 0.0ms | Allocations: 30650)
+
+
+Started GET "/hello" for 127.0.0.1 at 2021-01-18 15:38:34 +0000
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 35)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5571)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 5957)
+
+
+Started GET "/board_messages" for 127.0.0.1 at 2021-01-18 15:38:37 +0000
+Processing by BoardMessagesController#index as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms | Allocations: 1308)
+
+
+Started GET "/accounts/sign_in" for 127.0.0.1 at 2021-01-18 15:38:37 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 616)
+  Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 18.3ms | Allocations: 3292)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 8808)
+Completed 200 OK in 51ms (Views: 35.3ms | ActiveRecord: 1.1ms | Allocations: 15400)
+
+
+Started GET "/board_users" for 127.0.0.1 at 2021-01-18 15:38:42 +0000
+  
+SyntaxError (/home/ubuntu/shinstudy/app/controllers/board_users_controller.rb:3: syntax error, unexpected ':', expecting `end'
+...e_action :authenticate_account:
+...                              ^
+):
+  
+app/controllers/board_users_controller.rb:3: syntax error, unexpected ':', expecting `end'
+app/controllers/board_users_controller.rb:3: syntax error, unexpected ':', expecting `end'
+app/controllers/board_users_controller.rb:3: syntax error, unexpected ':', expecting `end'

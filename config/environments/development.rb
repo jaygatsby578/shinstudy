@@ -10,6 +10,7 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
+  config.hosts << "localhost-nickffitsgerald-1.paiza-user-free.cloud"
 
   # Show full error reports.
   config.consider_all_requests_local = true
