@@ -1,0 +1,3463 @@
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from migration_template at (erb):6)
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from migration_template at (erb):6)
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from <main> at bin/rails:4)
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from <main> at bin/rails:4)
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from <main> at bin/rails:4)
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from <main> at bin/rails:4)
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from <main> at bin/rails:4)
+  [1m[35m (9.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateAccounts (20210113084747)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "accounts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_accounts_on_email" ON "accounts" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_accounts_on_reset_password_token" ON "accounts" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210113084747"]]
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-13 08:47:56.033287"], ["updated_at", "2021-01-13 08:47:56.033287"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBoardUsers (20210113085044)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "board_users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nickname" text, "account_id" integer, "memo" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210113085044"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateBoardMessages (20210113085140)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "board_messages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "board_user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210113085140"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/board_messages" for ::1 at 2021-01-13 23:04:04 +0900
+  [1m[35m (15.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (C:/Users/sleep/Desktop/RailsDeviseApp6/app/controllers/board_messages_controller.rb:31: syntax error, unexpected local variable or method, expecting `end'
+... redirect_to '/board_messages'w
+...                              ^
+):
+  
+app/controllers/board_messages_controller.rb:31: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/board_messages_controller.rb:31: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/board_messages_controller.rb:31: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/board_messages" for ::1 at 2021-01-13 23:05:29 +0900
+Processing by BoardMessagesController#index as HTML
+Completed 401 Unauthorized in 77ms (Allocations: 5264)
+
+
+Started GET "/accounts/sign_in" for ::1 at 2021-01-13 23:05:30 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 46.6ms | Allocations: 611)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 176.0ms | Allocations: 3576)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/sleep/Desktop/RailsDeviseApp6/public/packs
+[Webpacker] Hash: 415a948d492e21802f43
+Version: webpack 4.46.0
+Time: 2210ms
+Built at: 2021/01/13 23:05:35
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d5a3c3b4dce84b5eb605.js    125 KiB  application  [emitted] [immutable]  application
+js/application-d5a3c3b4dce84b5eb605.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d5a3c3b4dce84b5eb605.js js/application-d5a3c3b4dce84b5eb605.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 5666.9ms | Allocations: 33788)
+Completed 200 OK in 5702ms (Views: 5676.0ms | ActiveRecord: 1.1ms | Allocations: 41619)
+
+
+Started GET "/accounts/sign_in" for ::1 at 2021-01-13 23:05:46 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 155)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1011)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 5522)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.0ms | Allocations: 6128)
+
+
+Started GET "/accounts/sign_in" for ::1 at 2021-01-13 23:05:48 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 155)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 5515)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms | Allocations: 6114)
+
+
+Started GET "/accounts/sign_up" for ::1 at 2021-01-13 23:07:24 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_error_messages.html.erb (Duration: 11.7ms | Allocations: 224)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 144)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 38.6ms | Allocations: 1874)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 78.3ms | Allocations: 6346)
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.0ms | Allocations: 7629)
+
+
+Started GET "/accounts/sign_in" for ::1 at 2021-01-13 23:07:26 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 155)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1013)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 5523)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.0ms | Allocations: 6113)
+
+
+Started GET "/board_messages" for ::1 at 2021-01-14 11:14:55 +0900
+  [1m[35m (18.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BoardMessagesController#index as HTML
+Completed 401 Unauthorized in 107ms (ActiveRecord: 0.0ms | Allocations: 1805)
+
+
+Started GET "/accounts/sign_in" for ::1 at 2021-01-14 11:14:56 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 128.0ms | Allocations: 617)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 520.2ms | Allocations: 2927)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 1257.0ms | Allocations: 11339)
+Completed 200 OK in 1565ms (Views: 1520.1ms | ActiveRecord: 1.5ms | Allocations: 18428)
+
+
+Started GET "/accounts/sign_up" for ::1 at 2021-01-14 11:18:34 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_error_messages.html.erb (Duration: 39.0ms | Allocations: 225)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 4.0ms | Allocations: 144)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 139.7ms | Allocations: 1875)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 214.2ms | Allocations: 6352)
+Completed 200 OK in 237ms (Views: 234.8ms | ActiveRecord: 0.0ms | Allocations: 7642)
+
+
+Started POST "/accounts" for ::1 at 2021-01-14 11:18:53 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"email"=>"taro@yamada", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAccount Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "accounts" WHERE "accounts"."email" = ? LIMIT ?[0m  [["email", "taro@yamada"], ["LIMIT", 1]]
+  [1m[36mAccount Create (5.3ms)[0m  [1m[32mINSERT INTO "accounts" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "taro@yamada"], ["encrypted_password", "$2a$12$1US3zdj5Ru92gsrhZWXRRu2vZNTtpsnWD2fg0HLiXV3mkMA1BLFzG"], ["created_at", "2021-01-14 02:18:54.646202"], ["updated_at", "2021-01-14 02:18:54.646202"]]
+  [1m[36mTRANSACTION (22.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/board_messages
+Completed 302 Found in 975ms (ActiveRecord: 29.5ms | Allocations: 8698)
+
+
+Started GET "/board_messages" for ::1 at 2021-01-14 11:18:54 +0900
+Processing by BoardMessagesController#index as HTML
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = ? ORDER BY "accounts"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.7ms | Allocations: 6177)
+
+
+  
+NoMethodError (undefined method `page' for #<Class:0x000000000d501b28>):
+  
+app/controllers/board_messages_controller.rb:9:in `index'
+  [1m[35m (22.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStudies (20210115033153)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "studies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "title" text, "memo" text, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210115033153"]]
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/studies" for ::1 at 2021-01-15 12:42:25 +0900
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 48.0ms | Allocations: 1175)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 1343.8ms | Allocations: 29944)
+Completed 200 OK in 1618ms (Views: 1459.0ms | ActiveRecord: 0.5ms | Allocations: 32982)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:43:05 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 131.3ms | Allocations: 5371)
+Completed 200 OK in 140ms (Views: 136.0ms | ActiveRecord: 0.4ms | Allocations: 5783)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 12:43:18 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/_form.html.erb (Duration: 421.0ms | Allocations: 8502)
+  Rendered studies/new.html.erb within layouts/application (Duration: 427.3ms | Allocations: 8856)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 505.2ms | Allocations: 13400)
+Completed 200 OK in 528ms (Views: 510.5ms | ActiveRecord: 1.8ms | Allocations: 17738)
+
+
+Started POST "/studies" for ::1 at 2021-01-15 12:44:33 +0900
+Processing by StudiesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "study"=>{"date(1i)"=>"2021", "date(2i)"=>"1", "date(3i)"=>"15", "title"=>"Ruby on Rails", "memo"=>"学習記録アプリ「study」の作成", "status"=>"80"}, "commit"=>"Create Study"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mStudy Create (2.1ms)[0m  [1m[32mINSERT INTO "studies" ("date", "title", "memo", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["date", "2021-01-15"], ["title", "Ruby on Rails"], ["memo", "学習記録アプリ「study」の作成"], ["status", 80], ["created_at", "2021-01-15 03:44:33.156090"], ["updated_at", "2021-01-15 03:44:33.156090"]]
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mTRANSACTION (25.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+Redirected to http://localhost:3000/studies/1
+Completed 302 Found in 64ms (ActiveRecord: 27.6ms | Allocations: 2883)
+
+
+Started GET "/studies/1" for ::1 at 2021-01-15 12:44:33 +0900
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+Redirected to http://localhost:3000/studies
+Completed 302 Found in 64ms (ActiveRecord: 0.3ms | Allocations: 3846)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:44:33 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 842)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 84.6ms | Allocations: 5481)
+Completed 200 OK in 90ms (Views: 87.6ms | ActiveRecord: 0.4ms | Allocations: 5888)
+
+
+Started GET "/studies/1" for ::1 at 2021-01-15 12:44:41 +0900
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.9ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+Redirected to http://localhost:3000/studies
+Completed 302 Found in 11ms (ActiveRecord: 0.9ms | Allocations: 798)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:44:41 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 832)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 69.5ms | Allocations: 5470)
+Completed 200 OK in 76ms (Views: 73.6ms | ActiveRecord: 0.3ms | Allocations: 5878)
+
+
+Started GET "/studies/1/edit" for ::1 at 2021-01-15 12:44:45 +0900
+Processing by StudiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/edit.html.erb within layouts/application
+  Rendered studies/_form.html.erb (Duration: 11.5ms | Allocations: 1802)
+  Rendered studies/edit.html.erb within layouts/application (Duration: 38.9ms | Allocations: 2062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 132.2ms | Allocations: 6728)
+Completed 200 OK in 151ms (Views: 135.7ms | ActiveRecord: 0.4ms | Allocations: 8293)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:44:48 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 843)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 72.0ms | Allocations: 5483)
+Completed 200 OK in 78ms (Views: 76.4ms | ActiveRecord: 0.3ms | Allocations: 5896)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:50:58 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/studies/index.html.erb:17
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 64.5ms | Allocations: 4593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 133.2ms | Allocations: 9388)
+Completed 200 OK in 162ms (Views: 155.8ms | ActiveRecord: 1.4ms | Allocations: 10804)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:51:30 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 55.3ms | Allocations: 1060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 132.6ms | Allocations: 5870)
+Completed 200 OK in 150ms (Views: 144.8ms | ActiveRecord: 0.5ms | Allocations: 7072)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:52:28 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 53.9ms | Allocations: 1069)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 113.8ms | Allocations: 5884)
+Completed 200 OK in 130ms (Views: 125.7ms | ActiveRecord: 0.3ms | Allocations: 7098)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:52:48 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 45.1ms | Allocations: 1062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 108.7ms | Allocations: 5872)
+Completed 200 OK in 126ms (Views: 121.1ms | ActiveRecord: 0.3ms | Allocations: 7073)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:53:23 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 43.5ms | Allocations: 1062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 117.8ms | Allocations: 5872)
+Completed 200 OK in 137ms (Views: 132.3ms | ActiveRecord: 0.4ms | Allocations: 7073)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:53:51 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 43.7ms | Allocations: 1062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 110.0ms | Allocations: 5876)
+Completed 200 OK in 130ms (Views: 124.6ms | ActiveRecord: 0.3ms | Allocations: 7077)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:54:02 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 53.5ms | Allocations: 1060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 118.9ms | Allocations: 5872)
+Completed 200 OK in 136ms (Views: 130.9ms | ActiveRecord: 0.5ms | Allocations: 7078)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:54:26 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 41.1ms | Allocations: 1062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 112.6ms | Allocations: 5874)
+Completed 200 OK in 134ms (Views: 129.3ms | ActiveRecord: 0.3ms | Allocations: 7079)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:54:44 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 82.5ms | Allocations: 5871)
+Completed 200 OK in 103ms (Views: 97.9ms | ActiveRecord: 0.4ms | Allocations: 7072)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:54:54 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 43.3ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 103.3ms | Allocations: 5883)
+Completed 200 OK in 127ms (Views: 119.7ms | ActiveRecord: 0.4ms | Allocations: 7095)
+
+
+Started GET "/studies/1/edit" for ::1 at 2021-01-15 12:55:14 +0900
+Processing by StudiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.7ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/edit.html.erb within layouts/application
+  Rendered studies/_form.html.erb (Duration: 6.9ms | Allocations: 2142)
+  Rendered studies/edit.html.erb within layouts/application (Duration: 11.1ms | Allocations: 2527)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 83.4ms | Allocations: 7190)
+Completed 200 OK in 116ms (Views: 86.2ms | ActiveRecord: 0.7ms | Allocations: 8866)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 12:55:17 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 804)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 83.9ms | Allocations: 5443)
+Completed 200 OK in 89ms (Views: 87.7ms | ActiveRecord: 0.4ms | Allocations: 5844)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 13:03:36 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/studies/index.html.erb:17
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1778)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 74.1ms | Allocations: 6589)
+Completed 200 OK in 97ms (Views: 91.0ms | ActiveRecord: 1.3ms | Allocations: 7790)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 13:03:40 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 54.8ms | Allocations: 624)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 123.0ms | Allocations: 5287)
+Completed 200 OK in 130ms (Views: 126.2ms | ActiveRecord: 0.0ms | Allocations: 5818)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 14:00:37 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 88.4ms | Allocations: 5411)
+Completed 200 OK in 106ms (Views: 101.7ms | Allocations: 6613)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 14:01:56 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 60.0ms | Allocations: 595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 127.7ms | Allocations: 5407)
+Completed 200 OK in 145ms (Views: 140.1ms | Allocations: 6613)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 14:02:12 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 55.6ms | Allocations: 595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 120.3ms | Allocations: 5406)
+Completed 200 OK in 141ms (Views: 136.4ms | Allocations: 6614)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 14:02:14 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 377)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 74.1ms | Allocations: 5019)
+Completed 200 OK in 80ms (Views: 78.9ms | Allocations: 5426)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 14:02:21 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 600)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 77.1ms | Allocations: 5417)
+Completed 200 OK in 103ms (Views: 98.8ms | Allocations: 6630)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 14:02:22 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 377)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 105.4ms | Allocations: 5013)
+Completed 200 OK in 111ms (Views: 110.2ms | Allocations: 5416)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 14:10:50 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/studies/index.html.erb:17
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 1780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 96.3ms | Allocations: 6422)
+Completed 200 OK in 104ms (Views: 99.1ms | ActiveRecord: 1.5ms | Allocations: 6951)
+
+
+Started GET "/studies/1/edit" for ::1 at 2021-01-15 14:11:10 +0900
+Processing by StudiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/edit.html.erb within layouts/application
+  Rendered studies/_form.html.erb (Duration: 6.3ms | Allocations: 2138)
+  Rendered studies/edit.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2523)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 81.0ms | Allocations: 7187)
+Completed 200 OK in 116ms (Views: 91.9ms | ActiveRecord: 0.5ms | Allocations: 8769)
+
+
+Started GET "/studies/1/edit" for ::1 at 2021-01-15 14:12:22 +0900
+Processing by StudiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/edit.html.erb within layouts/application
+  Rendered studies/edit.html.erb within layouts/application (Duration: 68.3ms | Allocations: 641)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 129.5ms | Allocations: 5452)
+Completed 200 OK in 170ms (Views: 144.4ms | ActiveRecord: 0.5ms | Allocations: 7686)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 14:12:34 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 110.3ms | Allocations: 5731)
+Completed 200 OK in 118ms (Views: 113.5ms | ActiveRecord: 0.4ms | Allocations: 6260)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 14:12:37 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 594)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.6ms | Allocations: 5233)
+Completed 200 OK in 75ms (Views: 71.2ms | ActiveRecord: 0.0ms | Allocations: 5769)
+
+
+Started POST "/studies" for ::1 at 2021-01-15 14:12:57 +0900
+Processing by StudiesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "study"=>{"date"=>"2020-11-4", "title"=>"java", "memo"=>"ｊぁぎ", "status"=>"1"}, "commit"=>"保存する"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mStudy Create (2.5ms)[0m  [1m[32mINSERT INTO "studies" ("date", "title", "memo", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["date", "2020-11-04"], ["title", "java"], ["memo", "ｊぁぎ"], ["status", 1], ["created_at", "2021-01-15 05:12:58.126900"], ["updated_at", "2021-01-15 05:12:58.126900"]]
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+Redirected to http://localhost:3000/studies/2
+Completed 302 Found in 53ms (ActiveRecord: 19.0ms | Allocations: 2605)
+
+
+Started GET "/studies/2" for ::1 at 2021-01-15 14:12:58 +0900
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+Redirected to http://localhost:3000/studies#index
+Completed 302 Found in 20ms (ActiveRecord: 0.4ms | Allocations: 794)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 14:12:58 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 890)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 83.5ms | Allocations: 5533)
+Completed 200 OK in 89ms (Views: 87.7ms | ActiveRecord: 0.4ms | Allocations: 5944)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 14:13:12 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 883)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 75.0ms | Allocations: 5526)
+Completed 200 OK in 95ms (Views: 93.3ms | ActiveRecord: 0.4ms | Allocations: 5928)
+
+
+Started DELETE "/studies/2" for ::1 at 2021-01-15 14:13:19 +0900
+Processing by StudiesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/studies_controller.rb:67:in `destroy'
+  [1m[36mStudy Destroy (7.0ms)[0m  [1m[31mDELETE FROM "studies" WHERE "studies"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/studies_controller.rb:67:in `destroy'
+  [1m[36mTRANSACTION (18.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/studies_controller.rb:67:in `destroy'
+Redirected to http://localhost:3000/studies
+Completed 302 Found in 52ms (ActiveRecord: 25.9ms | Allocations: 2659)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 14:13:19 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 803)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 82.8ms | Allocations: 5446)
+Completed 200 OK in 88ms (Views: 87.0ms | ActiveRecord: 0.4ms | Allocations: 5852)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 14:24:29 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/studies/index.html.erb:17
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 50.8ms | Allocations: 4600)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 111.9ms | Allocations: 9393)
+Completed 200 OK in 132ms (Views: 124.2ms | ActiveRecord: 1.7ms | Allocations: 10802)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 14:34:36 +0900
+Processing by StudiesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (1.1ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 25.5ms | Allocations: 3629)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 82.0ms | Allocations: 8254)
+Completed 200 OK in 98ms (Views: 83.9ms | ActiveRecord: 2.2ms | Allocations: 9594)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 14:34:41 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 602)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.6ms | Allocations: 5239)
+Completed 200 OK in 78ms (Views: 73.8ms | ActiveRecord: 0.0ms | Allocations: 5774)
+
+
+Started POST "/studies" for ::1 at 2021-01-15 14:34:49 +0900
+Processing by StudiesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "study"=>{"date"=>"2020-11-4", "title"=>"java", "memo"=>"ｆｇｄ", "status"=>"1"}, "commit"=>"保存する"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mStudy Create (8.4ms)[0m  [1m[32mINSERT INTO "studies" ("date", "title", "memo", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["date", "2020-11-04"], ["title", "java"], ["memo", "ｆｇｄ"], ["status", 1], ["created_at", "2021-01-15 05:34:49.908492"], ["updated_at", "2021-01-15 05:34:49.908492"]]
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mTRANSACTION (17.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+Redirected to http://localhost:3000/studies/3
+Completed 302 Found in 63ms (ActiveRecord: 26.2ms | Allocations: 2584)
+
+
+Started GET "/studies/3" for ::1 at 2021-01-15 14:34:50 +0900
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+Redirected to http://localhost:3000/studies#index
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 907)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 14:34:50 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 907)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 80.9ms | Allocations: 5550)
+Completed 200 OK in 86ms (Views: 84.3ms | ActiveRecord: 0.5ms | Allocations: 5975)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 15:52:47 +0900
+Processing by StudiesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 900)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.4ms | Allocations: 5537)
+Completed 200 OK in 81ms (Views: 61.9ms | ActiveRecord: 1.0ms | Allocations: 6553)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 15:54:36 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 900)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.3ms | Allocations: 5537)
+Completed 200 OK in 64ms (Views: 62.0ms | ActiveRecord: 0.5ms | Allocations: 5955)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 15:54:36 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 900)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.3ms | Allocations: 5539)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.2ms | Allocations: 5954)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 15:54:56 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 900)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.9ms | Allocations: 5537)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.6ms | Allocations: 5952)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:00:13 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 900)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 130.7ms | Allocations: 5543)
+Completed 200 OK in 134ms (Views: 132.3ms | ActiveRecord: 0.3ms | Allocations: 5963)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:04:25 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 21.4ms | Allocations: 1182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 91.2ms | Allocations: 6000)
+Completed 200 OK in 101ms (Views: 98.1ms | ActiveRecord: 0.2ms | Allocations: 7230)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:05:22 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 1180)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.0ms | Allocations: 5992)
+Completed 200 OK in 74ms (Views: 71.2ms | ActiveRecord: 0.2ms | Allocations: 7216)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:08:43 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 23.2ms | Allocations: 1185)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 78.7ms | Allocations: 6003)
+Completed 200 OK in 88ms (Views: 85.4ms | ActiveRecord: 0.3ms | Allocations: 7223)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:11:48 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 29.1ms | Allocations: 1178)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.9ms | Allocations: 5990)
+Completed 200 OK in 79ms (Views: 75.4ms | ActiveRecord: 0.3ms | Allocations: 7209)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:12:41 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 1177)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.9ms | Allocations: 5989)
+Completed 200 OK in 71ms (Views: 68.0ms | ActiveRecord: 0.4ms | Allocations: 7208)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:13:09 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 1178)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 74.6ms | Allocations: 5992)
+Completed 200 OK in 85ms (Views: 81.6ms | ActiveRecord: 0.2ms | Allocations: 7211)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:13:38 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 23.0ms | Allocations: 1179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 80.1ms | Allocations: 5991)
+Completed 200 OK in 98ms (Views: 94.6ms | ActiveRecord: 0.2ms | Allocations: 7210)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:14:10 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 36.4ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 76.7ms | Allocations: 6000)
+Completed 200 OK in 88ms (Views: 83.3ms | ActiveRecord: 0.4ms | Allocations: 7230)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 16:14:26 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 594)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.4ms | Allocations: 5236)
+Completed 200 OK in 56ms (Views: 53.1ms | ActiveRecord: 0.0ms | Allocations: 5772)
+
+
+Started POST "/studies" for ::1 at 2021-01-15 16:15:47 +0900
+Processing by StudiesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "study"=>{"date"=>"0115", "title"=>"htmlの「progress」", "memo"=>"jqueryを組み込まないでhtmlだけで処理した。", "status"=>"100"}, "commit"=>"保存する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mStudy Create (1.2ms)[0m  [1m[32mINSERT INTO "studies" ("title", "memo", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "htmlの「progress」"], ["memo", "jqueryを組み込まないでhtmlだけで処理した。"], ["status", 100], ["created_at", "2021-01-15 07:15:47.214331"], ["updated_at", "2021-01-15 07:15:47.214331"]]
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+Redirected to http://localhost:3000/studies/4
+Completed 302 Found in 56ms (ActiveRecord: 13.9ms | Allocations: 2581)
+
+
+Started GET "/studies/4" for ::1 at 2021-01-15 16:15:47 +0900
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+Redirected to http://localhost:3000/studies#index
+Completed 302 Found in 20ms (ActiveRecord: 0.2ms | Allocations: 817)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:15:47 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 986)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | Allocations: 5624)
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.3ms | Allocations: 6049)
+
+
+Started GET "/studies/4/edit" for ::1 at 2021-01-15 16:15:55 +0900
+Processing by StudiesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/edit.html.erb within layouts/application
+  Rendered studies/edit.html.erb within layouts/application (Duration: 27.5ms | Allocations: 630)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 63.7ms | Allocations: 5273)
+Completed 200 OK in 97ms (Views: 71.9ms | ActiveRecord: 0.4ms | Allocations: 6835)
+
+
+Started PATCH "/studies/4" for ::1 at 2021-01-15 16:16:09 +0900
+Processing by StudiesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "study"=>{"date"=>"2021-1-15", "title"=>"htmlの「progress」", "memo"=>"jqueryを組み込まないでhtmlだけで処理した。", "status"=>"100"}, "commit"=>"変更を保存する", "id"=>"4"}
+  [1m[36mStudy Load (0.1ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/studies_controller.rb:54:in `block in update'
+  [1m[36mStudy Update (1.4ms)[0m  [1m[33mUPDATE "studies" SET "date" = ?, "updated_at" = ? WHERE "studies"."id" = ?[0m  [["date", "2021-01-15"], ["updated_at", "2021-01-15 07:16:09.219409"], ["id", 4]]
+  ↳ app/controllers/studies_controller.rb:54:in `block in update'
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/studies_controller.rb:54:in `block in update'
+Redirected to http://localhost:3000/studies/4
+Completed 302 Found in 35ms (ActiveRecord: 12.8ms | Allocations: 3196)
+
+
+Started GET "/studies/4" for ::1 at 2021-01-15 16:16:09 +0900
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+Redirected to http://localhost:3000/studies#index
+Completed 302 Found in 23ms (ActiveRecord: 0.2ms | Allocations: 794)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:16:09 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 995)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.5ms | Allocations: 5632)
+Completed 200 OK in 72ms (Views: 71.5ms | ActiveRecord: 0.3ms | Allocations: 6056)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:16:56 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY created_at DESC[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 989)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.7ms | Allocations: 5628)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.6ms | Allocations: 6043)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:18:47 +0900
+Processing by StudiesController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date desc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 4279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 53.2ms | Allocations: 8905)
+Completed 200 OK in 80ms (Views: 60.8ms | ActiveRecord: 1.5ms | Allocations: 10245)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:19:06 +0900
+Processing by StudiesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 22.0ms | Allocations: 4238)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 71.4ms | Allocations: 8884)
+Completed 200 OK in 88ms (Views: 72.3ms | ActiveRecord: 2.2ms | Allocations: 10222)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:33:14 +0900
+Processing by StudiesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 36.1ms | Allocations: 1277)
+  Rendered layout layouts/application.html.erb (Duration: 182.1ms | Allocations: 12403)
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 14.5ms | Allocations: 14205)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "...ckground-color:": expected expression (e.g. 1px, bold), was "##00a5de;"
+        on line 3:23 of app/assets/stylesheets/studies.scss
+>>     background-color: ##00a5de;
+
+   ----------------------^
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    10:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+  
+app/assets/stylesheets/studies.scss:3
+app/views/layouts/application.html.erb:10
+Started GET "/studies" for ::1 at 2021-01-15 16:33:46 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1015)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 206.9ms | Allocations: 19069)
+Completed 200 OK in 212ms (Views: 210.6ms | ActiveRecord: 0.4ms | Allocations: 19512)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:35:48 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 28.1ms | Allocations: 1274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 191.5ms | Allocations: 20123)
+Completed 200 OK in 202ms (Views: 199.0ms | ActiveRecord: 0.2ms | Allocations: 21357)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:35:50 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 998)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.6ms | Allocations: 5637)
+Completed 200 OK in 66ms (Views: 65.0ms | ActiveRecord: 0.3ms | Allocations: 6053)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 16:36:08 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 599)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 5238)
+Completed 200 OK in 49ms (Views: 46.1ms | ActiveRecord: 0.0ms | Allocations: 5777)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:36:10 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 995)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.4ms | Allocations: 5634)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.3ms | Allocations: 6053)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:36:47 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 989)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 180.7ms | Allocations: 20188)
+Completed 200 OK in 185ms (Views: 183.7ms | ActiveRecord: 0.5ms | Allocations: 20608)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:40:33 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 1304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 182.1ms | Allocations: 20408)
+Completed 200 OK in 192ms (Views: 188.8ms | ActiveRecord: 0.2ms | Allocations: 21633)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:41:05 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  Rendered studies/index.html.erb within layouts/application (Duration: 36.7ms | Allocations: 1313)
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 1378)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms | Allocations: 2580)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1 class="display-4 text-primary">学習記録アプリ</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>学習した内容</th>
+      <th>備考</th>
+      <th>進捗率</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studies.each do |study| %>
+      <tr>
+        <td width="200px"><%= study.date %></td>
+        <td width="200px"><%= study.title %></td>
+        <td width="300px"><%= study.memo %></td>
+        <td width="100px"><%= study.status %>％</td>
+        <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+        <td>
+        <%= submit_tag "編集する", edit_study_path(study) {class:"btn btn-primary"} %>
+        </td>
+        <%= link_to '編集する', %>
+        <div class="suich">
+          <td><%= link_to '削除する', study, method: :delete %></td>
+        </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新しい学習項目を追加する', new_study_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1 class="display-4 text-primary">学習記録アプリ</h1>
+4:    
+5:    <table class="table">
+6:      <thead>
+7:        <tr>
+8:          <th>日付</th>
+9:          <th>学習した内容</th>
+10:          <th>備考</th>
+11:          <th>進捗率</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <% @studies.each do |study| %>
+18:          <tr>
+19:            <td width="200px"><%= study.date %></td>
+20:            <td width="200px"><%= study.title %></td>
+21:            <td width="300px"><%= study.memo %></td>
+22:            <td width="100px"><%= study.status %>％</td>
+23:            <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+24:            <td>
+25:            <%= submit_tag "編集する", edit_study_path(study) {class:"btn btn-primary"} %>
+26:            </td>
+27:            <%= link_to '編集する', %>
+28:            <div class="suich">
+29:              <td><%= link_to '削除する', study, method: :delete %></td>
+30:            </div>
+31:          </tr>
+32:        <% end %>
+33:      </tbody>
+34:    </table>
+35:    
+36:    <br>
+37:    
+38:    <%= link_to '新しい学習項目を追加する', new_study_path %>
+  
+app/views/studies/index.html.erb:25: syntax error, unexpected '}', expecting '.' or &. or :: or '['
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:25: syntax error, unexpected '}', expecting '.' or &. or :: or '['
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:25: syntax error, unexpected '}', expecting '.' or &. or :: or '['
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:25: syntax error, unexpected '}', expecting '.' or &. or :: or '['
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:25: syntax error, unexpected '}', expecting '.' or &. or :: or '['
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:25: syntax error, unexpected '}', expecting '.' or &. or :: or '['
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+Started GET "/studies" for ::1 at 2021-01-15 16:41:31 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  Rendered studies/index.html.erb within layouts/application (Duration: 21.8ms | Allocations: 1311)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 1376)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms | Allocations: 2578)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1 class="display-4 text-primary">学習記録アプリ</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>学習した内容</th>
+      <th>備考</th>
+      <th>進捗率</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studies.each do |study| %>
+      <tr>
+        <td width="200px"><%= study.date %></td>
+        <td width="200px"><%= study.title %></td>
+        <td width="300px"><%= study.memo %></td>
+        <td width="100px"><%= study.status %>％</td>
+        <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+        <td>
+        <%= submit_tag "編集する", {class:"btn btn-primary"}, edit_study_path(study) %>
+        </td>
+        <%= link_to '編集する', %>
+        <div class="suich">
+          <td><%= link_to '削除する', study, method: :delete %></td>
+        </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新しい学習項目を追加する', new_study_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1 class="display-4 text-primary">学習記録アプリ</h1>
+4:    
+5:    <table class="table">
+6:      <thead>
+7:        <tr>
+8:          <th>日付</th>
+9:          <th>学習した内容</th>
+10:          <th>備考</th>
+11:          <th>進捗率</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <% @studies.each do |study| %>
+18:          <tr>
+19:            <td width="200px"><%= study.date %></td>
+20:            <td width="200px"><%= study.title %></td>
+21:            <td width="300px"><%= study.memo %></td>
+22:            <td width="100px"><%= study.status %>％</td>
+23:            <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+24:            <td>
+25:            <%= submit_tag "編集する", {class:"btn btn-primary"}, edit_study_path(study) %>
+26:            </td>
+27:            <%= link_to '編集する', %>
+28:            <div class="suich">
+29:              <td><%= link_to '削除する', study, method: :delete %></td>
+30:            </div>
+31:          </tr>
+32:        <% end %>
+33:      </tbody>
+34:    </table>
+35:    
+36:    <br>
+37:    
+38:    <%= link_to '新しい学習項目を追加する', new_study_path %>
+  
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+Started GET "/studies" for ::1 at 2021-01-15 16:41:41 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  Rendered studies/index.html.erb within layouts/application (Duration: 23.4ms | Allocations: 1311)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 1376)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms | Allocations: 2578)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1 class="display-4 text-primary">学習記録アプリ</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>学習した内容</th>
+      <th>備考</th>
+      <th>進捗率</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studies.each do |study| %>
+      <tr>
+        <td width="200px"><%= study.date %></td>
+        <td width="200px"><%= study.title %></td>
+        <td width="300px"><%= study.memo %></td>
+        <td width="100px"><%= study.status %>％</td>
+        <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+        <td>
+        <%= submit_tag "編集する", {class:"btn btn-primary"} %>
+        </td>
+        <%= link_to '編集する', %>
+        <div class="suich">
+          <td><%= link_to '削除する', study, method: :delete %></td>
+        </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新しい学習項目を追加する', new_study_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1 class="display-4 text-primary">学習記録アプリ</h1>
+4:    
+5:    <table class="table">
+6:      <thead>
+7:        <tr>
+8:          <th>日付</th>
+9:          <th>学習した内容</th>
+10:          <th>備考</th>
+11:          <th>進捗率</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <% @studies.each do |study| %>
+18:          <tr>
+19:            <td width="200px"><%= study.date %></td>
+20:            <td width="200px"><%= study.title %></td>
+21:            <td width="300px"><%= study.memo %></td>
+22:            <td width="100px"><%= study.status %>％</td>
+23:            <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+24:            <td>
+25:            <%= submit_tag "編集する", {class:"btn btn-primary"} %>
+26:            </td>
+27:            <%= link_to '編集する', %>
+28:            <div class="suich">
+29:              <td><%= link_to '削除する', study, method: :delete %></td>
+30:            </div>
+31:          </tr>
+32:        <% end %>
+33:      </tbody>
+34:    </table>
+35:    
+36:    <br>
+37:    
+38:    <%= link_to '新しい学習項目を追加する', new_study_path %>
+  
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:27: syntax error, unexpected ')'
+app/views/studies/index.html.erb:32: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:41: syntax error, unexpected `end', expecting ')'
+Started GET "/studies" for ::1 at 2021-01-15 16:41:56 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 25.3ms | Allocations: 1301)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 65.3ms | Allocations: 5803)
+Completed 200 OK in 78ms (Views: 73.3ms | ActiveRecord: 0.3ms | Allocations: 7031)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:42:40 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 25.5ms | Allocations: 2023)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 2087)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.2ms | Allocations: 3279)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 0..2)):
+    22:         <td width="100px"><%= study.status %>％</td>
+    23:         <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+    24:         <td>
+    25:         <%= submit_tag "編集する", {class:"btn btn-primary"}, edit_study_path(study) %>
+    26:         </td>
+    27: 
+    28:         <div class="suich">
+  
+app/views/studies/index.html.erb:25
+app/views/studies/index.html.erb:17
+Started GET "/studies" for ::1 at 2021-01-15 16:42:58 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 37.3ms | Allocations: 3230)
+  Rendered layout layouts/application.html.erb (Duration: 39.0ms | Allocations: 3294)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.2ms | Allocations: 4495)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/studies/3/edit":String):
+    22:         <td width="100px"><%= study.status %>％</td>
+    23:         <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+    24:         <td>
+    25:         <%= link_to "編集する", {class:"btn btn-primary"}, edit_study_path(study) %>
+    26:         </td>
+    27: 
+    28:         <div class="suich">
+  
+app/views/studies/index.html.erb:25
+app/views/studies/index.html.erb:17
+Started GET "/studies" for ::1 at 2021-01-15 16:44:56 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 27.8ms | Allocations: 2057)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.8ms | Allocations: 6877)
+Completed 200 OK in 74ms (Views: 69.0ms | ActiveRecord: 0.2ms | Allocations: 8105)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:46:48 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 28.7ms | Allocations: 1289)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.9ms | Allocations: 6103)
+Completed 200 OK in 89ms (Views: 86.0ms | ActiveRecord: 0.5ms | Allocations: 7322)
+
+
+Started GET "/studies/3/edit" for ::1 at 2021-01-15 16:46:52 +0900
+Processing by StudiesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudy Load (0.7ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/edit.html.erb within layouts/application
+  Rendered studies/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 637)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 5276)
+Completed 200 OK in 80ms (Views: 53.4ms | ActiveRecord: 0.7ms | Allocations: 6963)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:46:54 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1008)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.7ms | Allocations: 5647)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.4ms | Allocations: 6066)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:47:39 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 22.5ms | Allocations: 1292)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 57.8ms | Allocations: 6112)
+Completed 200 OK in 67ms (Views: 64.1ms | ActiveRecord: 0.6ms | Allocations: 7340)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:47:52 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 30.1ms | Allocations: 1290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 72.5ms | Allocations: 6104)
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 0.2ms | Allocations: 7323)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:48:19 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 32.4ms | Allocations: 1290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.2ms | Allocations: 6112)
+Completed 200 OK in 82ms (Views: 78.8ms | ActiveRecord: 0.4ms | Allocations: 7340)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 16:49:27 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  Rendered studies/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 1363)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 2556)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1 class="display-4 text-primary">学習記録アプリ</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>学習した内容</th>
+      <th>備考</th>
+      <th>進捗率</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studies.each do |study| %>
+      <tr>
+        <td width="200px"><%= study.date %></td>
+        <td width="200px"><%= study.title %></td>
+        <td width="300px"><%= study.memo %></td>
+        <td width="100px"><%= study.status %>％</td>
+        <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+        <td width="150px">
+          <%= link_to '編集する',edit_study_path(study), {class:"btn btn-primary"} %>
+        </td>
+        <td width="150px">
+          <%= link_to '削除する',study, method: :delete, {class:"btn btn-primary"} %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新しい学習項目を追加する', new_study_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1 class="display-4 text-primary">学習記録アプリ</h1>
+4:    
+5:    <table class="table">
+6:      <thead>
+7:        <tr>
+8:          <th>日付</th>
+9:          <th>学習した内容</th>
+10:          <th>備考</th>
+11:          <th>進捗率</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <% @studies.each do |study| %>
+18:          <tr>
+19:            <td width="200px"><%= study.date %></td>
+20:            <td width="200px"><%= study.title %></td>
+21:            <td width="300px"><%= study.memo %></td>
+22:            <td width="100px"><%= study.status %>％</td>
+23:            <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+24:            <td width="150px">
+25:              <%= link_to '編集する',edit_study_path(study), {class:"btn btn-primary"} %>
+26:            </td>
+27:            <td width="150px">
+28:              <%= link_to '削除する',study, method: :delete, {class:"btn btn-primary"} %>
+29:            </td>
+30:          </tr>
+31:        <% end %>
+32:      </tbody>
+33:    </table>
+34:    
+35:    <br>
+36:    
+37:    <%= link_to '新しい学習項目を追加する', new_study_path %>
+  
+app/views/studies/index.html.erb:28: syntax error, unexpected ')', expecting =>
+app/views/studies/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:28: syntax error, unexpected ')', expecting =>
+app/views/studies/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:28: syntax error, unexpected ')', expecting =>
+app/views/studies/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:28: syntax error, unexpected ')', expecting =>
+app/views/studies/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:28: syntax error, unexpected ')', expecting =>
+app/views/studies/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:28: syntax error, unexpected ')', expecting =>
+app/views/studies/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:40: syntax error, unexpected `end', expecting ')'
+Started GET "/studies" for ::1 at 2021-01-15 16:50:04 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 37.1ms | Allocations: 5161)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 5225)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.2ms | Allocations: 6426)
+
+
+  
+ActionView::Template::Error (undefined method `delete_study_path' for #<ActionView::Base:0x0000000001a838>
+Did you mean?  edit_study_path):
+    25:           <%= link_to '編集する',edit_study_path(study), {class:"btn btn-primary"} %>
+    26:         </td>
+    27:         <td width="150px">
+    28:           <%= link_to '削除する',delete_study_path(study), {class:"btn btn-primary"} %>
+    29:         </td>
+    30:       </tr>
+    31:     <% end %>
+  
+app/views/studies/index.html.erb:28
+app/views/studies/index.html.erb:17
+Started GET "/studies" for ::1 at 2021-01-15 16:51:08 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  Rendered studies/index.html.erb within layouts/application (Duration: 22.0ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 1363)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 2565)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1 class="display-4 text-primary">学習記録アプリ</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>学習した内容</th>
+      <th>備考</th>
+      <th>進捗率</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studies.each do |study| %>
+      <tr>
+        <td width="200px"><%= study.date %></td>
+        <td width="200px"><%= study.title %></td>
+        <td width="300px"><%= study.memo %></td>
+        <td width="100px"><%= study.status %>％</td>
+        <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+        <td width="150px">
+          <%= link_to '編集する',edit_study_path(study), {class:"btn btn-primary"} %>
+        </td>
+        <td width="150px">
+          <%= link_to '削除する',{class:"btn btn-primary"},study, method: :delete, %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新しい学習項目を追加する', new_study_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1 class="display-4 text-primary">学習記録アプリ</h1>
+4:    
+5:    <table class="table">
+6:      <thead>
+7:        <tr>
+8:          <th>日付</th>
+9:          <th>学習した内容</th>
+10:          <th>備考</th>
+11:          <th>進捗率</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <% @studies.each do |study| %>
+18:          <tr>
+19:            <td width="200px"><%= study.date %></td>
+20:            <td width="200px"><%= study.title %></td>
+21:            <td width="300px"><%= study.memo %></td>
+22:            <td width="100px"><%= study.status %>％</td>
+23:            <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+24:            <td width="150px">
+25:              <%= link_to '編集する',edit_study_path(study), {class:"btn btn-primary"} %>
+26:            </td>
+27:            <td width="150px">
+28:              <%= link_to '削除する',{class:"btn btn-primary"},study, method: :delete, %>
+29:            </td>
+30:          </tr>
+31:        <% end %>
+32:      </tbody>
+33:    </table>
+34:    
+35:    <br>
+36:    
+37:    <%= link_to '新しい学習項目を追加する', new_study_path %>
+  
+app/views/studies/index.html.erb:28: syntax error, unexpected ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:28: syntax error, unexpected ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:28: syntax error, unexpected ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:28: syntax error, unexpected ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:28: syntax error, unexpected ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:28: syntax error, unexpected ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:40: syntax error, unexpected `end', expecting ')'
+Started GET "/studies/3/edit" for ::1 at 2021-01-15 17:53:30 +0900
+Processing by StudiesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/edit.html.erb within layouts/application
+  Rendered studies/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 640)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 53.3ms | Allocations: 5459)
+Completed 200 OK in 102ms (Views: 67.3ms | ActiveRecord: 0.9ms | Allocations: 8317)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 17:53:34 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  Rendered studies/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 1363)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 1882)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1 class="display-4 text-primary">学習記録アプリ</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>学習した内容</th>
+      <th>備考</th>
+      <th>進捗率</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studies.each do |study| %>
+      <tr>
+        <td width="200px"><%= study.date %></td>
+        <td width="200px"><%= study.title %></td>
+        <td width="300px"><%= study.memo %></td>
+        <td width="100px"><%= study.status %>％</td>
+        <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+        <td width="150px">
+        <button type="button" class="btn btn-success">
+          <%= link_to '編集する',edit_study_path(study) %>
+        </button>
+        </td>
+        <td width="150px">
+          <%= link_to '削除する',{class:"btn btn-primary"},study, method: :delete, %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新しい学習項目を追加する', new_study_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1 class="display-4 text-primary">学習記録アプリ</h1>
+4:    
+5:    <table class="table">
+6:      <thead>
+7:        <tr>
+8:          <th>日付</th>
+9:          <th>学習した内容</th>
+10:          <th>備考</th>
+11:          <th>進捗率</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <% @studies.each do |study| %>
+18:          <tr>
+19:            <td width="200px"><%= study.date %></td>
+20:            <td width="200px"><%= study.title %></td>
+21:            <td width="300px"><%= study.memo %></td>
+22:            <td width="100px"><%= study.status %>％</td>
+23:            <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+24:            <td width="150px">
+25:            <button type="button" class="btn btn-success">
+26:              <%= link_to '編集する',edit_study_path(study) %>
+27:            </button>
+28:            </td>
+29:            <td width="150px">
+30:              <%= link_to '削除する',{class:"btn btn-primary"},study, method: :delete, %>
+31:            </td>
+32:          </tr>
+33:        <% end %>
+34:      </tbody>
+35:    </table>
+36:    
+37:    <br>
+38:    
+39:    <%= link_to '新しい学習項目を追加する', new_study_path %>
+  
+app/views/studies/index.html.erb:30: syntax error, unexpected ')'
+app/views/studies/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:42: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:30: syntax error, unexpected ')'
+app/views/studies/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:42: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:30: syntax error, unexpected ')'
+app/views/studies/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:42: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:30: syntax error, unexpected ')'
+app/views/studies/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:42: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:30: syntax error, unexpected ')'
+app/views/studies/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:42: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:30: syntax error, unexpected ')'
+app/views/studies/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:42: syntax error, unexpected `end', expecting ')'
+Started GET "/studies" for ::1 at 2021-01-15 17:54:34 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  Rendered studies/index.html.erb within layouts/application (Duration: 24.2ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 1363)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms | Allocations: 2565)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1 class="display-4 text-primary">学習記録アプリ</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>学習した内容</th>
+      <th>備考</th>
+      <th>進捗率</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studies.each do |study| %>
+      <tr>
+        <td width="200px"><%= study.date %></td>
+        <td width="200px"><%= study.title %></td>
+        <td width="300px"><%= study.memo %></td>
+        <td width="100px"><%= study.status %>％</td>
+        <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+        <td width="150px">
+        <button type="button" class="btn btn-success">
+          <%= link_to '編集する',edit_study_path(study) %>
+        </button>
+        </td>
+        <td width="150px">
+        <button type="button" class="btn btn-success">
+          <%= link_to '削除する',study, method: :delete, %>
+          </button>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新しい学習項目を追加する', new_study_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1 class="display-4 text-primary">学習記録アプリ</h1>
+4:    
+5:    <table class="table">
+6:      <thead>
+7:        <tr>
+8:          <th>日付</th>
+9:          <th>学習した内容</th>
+10:          <th>備考</th>
+11:          <th>進捗率</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <% @studies.each do |study| %>
+18:          <tr>
+19:            <td width="200px"><%= study.date %></td>
+20:            <td width="200px"><%= study.title %></td>
+21:            <td width="300px"><%= study.memo %></td>
+22:            <td width="100px"><%= study.status %>％</td>
+23:            <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+24:            <td width="150px">
+25:            <button type="button" class="btn btn-success">
+26:              <%= link_to '編集する',edit_study_path(study) %>
+27:            </button>
+28:            </td>
+29:            <td width="150px">
+30:            <button type="button" class="btn btn-success">
+31:              <%= link_to '削除する',study, method: :delete, %>
+32:              </button>
+33:            </td>
+34:          </tr>
+35:        <% end %>
+36:      </tbody>
+37:    </table>
+38:    
+39:    <br>
+40:    
+41:    <%= link_to '新しい学習項目を追加する', new_study_path %>
+  
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+Started GET "/studies" for ::1 at 2021-01-15 17:54:35 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  Rendered studies/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1288)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 1353)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 1745)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1 class="display-4 text-primary">学習記録アプリ</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>学習した内容</th>
+      <th>備考</th>
+      <th>進捗率</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studies.each do |study| %>
+      <tr>
+        <td width="200px"><%= study.date %></td>
+        <td width="200px"><%= study.title %></td>
+        <td width="300px"><%= study.memo %></td>
+        <td width="100px"><%= study.status %>％</td>
+        <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+        <td width="150px">
+        <button type="button" class="btn btn-success">
+          <%= link_to '編集する',edit_study_path(study) %>
+        </button>
+        </td>
+        <td width="150px">
+        <button type="button" class="btn btn-success">
+          <%= link_to '削除する',study, method: :delete, %>
+          </button>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新しい学習項目を追加する', new_study_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1 class="display-4 text-primary">学習記録アプリ</h1>
+4:    
+5:    <table class="table">
+6:      <thead>
+7:        <tr>
+8:          <th>日付</th>
+9:          <th>学習した内容</th>
+10:          <th>備考</th>
+11:          <th>進捗率</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <% @studies.each do |study| %>
+18:          <tr>
+19:            <td width="200px"><%= study.date %></td>
+20:            <td width="200px"><%= study.title %></td>
+21:            <td width="300px"><%= study.memo %></td>
+22:            <td width="100px"><%= study.status %>％</td>
+23:            <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+24:            <td width="150px">
+25:            <button type="button" class="btn btn-success">
+26:              <%= link_to '編集する',edit_study_path(study) %>
+27:            </button>
+28:            </td>
+29:            <td width="150px">
+30:            <button type="button" class="btn btn-success">
+31:              <%= link_to '削除する',study, method: :delete, %>
+32:              </button>
+33:            </td>
+34:          </tr>
+35:        <% end %>
+36:      </tbody>
+37:    </table>
+38:    
+39:    <br>
+40:    
+41:    <%= link_to '新しい学習項目を追加する', new_study_path %>
+  
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+Started GET "/studies" for ::1 at 2021-01-15 17:54:36 +0900
+Processing by StudiesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  Rendered studies/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1293)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 1513)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.8ms | Allocations: 2811)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1 class="display-4 text-primary">学習記録アプリ</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>学習した内容</th>
+      <th>備考</th>
+      <th>進捗率</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studies.each do |study| %>
+      <tr>
+        <td width="200px"><%= study.date %></td>
+        <td width="200px"><%= study.title %></td>
+        <td width="300px"><%= study.memo %></td>
+        <td width="100px"><%= study.status %>％</td>
+        <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+        <td width="150px">
+        <button type="button" class="btn btn-success">
+          <%= link_to '編集する',edit_study_path(study) %>
+        </button>
+        </td>
+        <td width="150px">
+        <button type="button" class="btn btn-success">
+          <%= link_to '削除する',study, method: :delete, %>
+          </button>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新しい学習項目を追加する', new_study_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1 class="display-4 text-primary">学習記録アプリ</h1>
+4:    
+5:    <table class="table">
+6:      <thead>
+7:        <tr>
+8:          <th>日付</th>
+9:          <th>学習した内容</th>
+10:          <th>備考</th>
+11:          <th>進捗率</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <% @studies.each do |study| %>
+18:          <tr>
+19:            <td width="200px"><%= study.date %></td>
+20:            <td width="200px"><%= study.title %></td>
+21:            <td width="300px"><%= study.memo %></td>
+22:            <td width="100px"><%= study.status %>％</td>
+23:            <td width="20px"><progress max="100" value="<%= study.status %>"></progress></td>
+24:            <td width="150px">
+25:            <button type="button" class="btn btn-success">
+26:              <%= link_to '編集する',edit_study_path(study) %>
+27:            </button>
+28:            </td>
+29:            <td width="150px">
+30:            <button type="button" class="btn btn-success">
+31:              <%= link_to '削除する',study, method: :delete, %>
+32:              </button>
+33:            </td>
+34:          </tr>
+35:        <% end %>
+36:      </tbody>
+37:    </table>
+38:    
+39:    <br>
+40:    
+41:    <%= link_to '新しい学習項目を追加する', new_study_path %>
+  
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:31: syntax error, unexpected ')'
+app/views/studies/index.html.erb:35: syntax error, unexpected `end', expecting ')'
+app/views/studies/index.html.erb:44: syntax error, unexpected `end', expecting ')'
+Started GET "/studies" for ::1 at 2021-01-15 17:55:01 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 28.3ms | Allocations: 1279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 71.1ms | Allocations: 6099)
+Completed 200 OK in 80ms (Views: 77.6ms | ActiveRecord: 0.2ms | Allocations: 7327)
+
+
+Started GET "/studies/3/edit" for ::1 at 2021-01-15 17:55:09 +0900
+Processing by StudiesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/edit.html.erb within layouts/application
+  Rendered studies/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.2ms | Allocations: 5277)
+Completed 200 OK in 83ms (Views: 57.0ms | ActiveRecord: 0.6ms | Allocations: 6860)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 17:55:15 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.8ms | Allocations: 5635)
+Completed 200 OK in 59ms (Views: 57.8ms | ActiveRecord: 0.6ms | Allocations: 6054)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 18:02:12 +0900
+Processing by StudiesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.7ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 31.1ms | Allocations: 1277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 69.6ms | Allocations: 6091)
+Completed 200 OK in 101ms (Views: 85.8ms | ActiveRecord: 1.2ms | Allocations: 7911)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 18:02:35 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 1277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 63.9ms | Allocations: 6091)
+Completed 200 OK in 80ms (Views: 76.4ms | ActiveRecord: 0.3ms | Allocations: 7310)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 18:05:39 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 32.6ms | Allocations: 1277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.9ms | Allocations: 6091)
+Completed 200 OK in 80ms (Views: 77.2ms | ActiveRecord: 0.3ms | Allocations: 7310)
+
+
+Started GET "/studies/1/edit" for ::1 at 2021-01-15 18:05:44 +0900
+Processing by StudiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/edit.html.erb within layouts/application
+  Rendered studies/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 644)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.1ms | Allocations: 5288)
+Completed 200 OK in 82ms (Views: 46.3ms | ActiveRecord: 0.3ms | Allocations: 6874)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 18:05:46 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.7ms | Allocations: 5637)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.4ms | Allocations: 6059)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 18:06:25 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 29.1ms | Allocations: 1277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 67.8ms | Allocations: 6091)
+Completed 200 OK in 77ms (Views: 73.7ms | ActiveRecord: 0.3ms | Allocations: 7316)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 18:11:48 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 1279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.3ms | Allocations: 6093)
+Completed 200 OK in 76ms (Views: 72.5ms | ActiveRecord: 0.3ms | Allocations: 7312)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 18:13:09 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 30.2ms | Allocations: 1277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 69.6ms | Allocations: 6092)
+Completed 200 OK in 87ms (Views: 84.0ms | ActiveRecord: 0.2ms | Allocations: 7311)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 18:15:47 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 19.3ms | Allocations: 1251)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 6065)
+Completed 200 OK in 65ms (Views: 58.8ms | ActiveRecord: 0.2ms | Allocations: 7284)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 18:16:57 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 21.8ms | Allocations: 1250)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.3ms | Allocations: 6064)
+Completed 200 OK in 66ms (Views: 62.8ms | ActiveRecord: 0.2ms | Allocations: 7283)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:03:36 +0900
+Processing by StudiesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (1.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 26.1ms | Allocations: 1280)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.7ms | Allocations: 6101)
+Completed 200 OK in 90ms (Views: 72.1ms | ActiveRecord: 2.9ms | Allocations: 7930)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:05:08 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 25.9ms | Allocations: 1282)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 76.0ms | Allocations: 6102)
+Completed 200 OK in 85ms (Views: 82.7ms | ActiveRecord: 0.2ms | Allocations: 7324)
+
+
+Started GET "/studies/3/edit" for ::1 at 2021-01-15 23:05:14 +0900
+Processing by StudiesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/edit.html.erb within layouts/application
+  Rendered studies/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.3ms | Allocations: 5277)
+Completed 200 OK in 72ms (Views: 51.0ms | ActiveRecord: 0.4ms | Allocations: 6860)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:05:19 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 55.8ms | Allocations: 5632)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.2ms | Allocations: 6051)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:05:45 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 29.0ms | Allocations: 1279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.9ms | Allocations: 6093)
+Completed 200 OK in 80ms (Views: 77.4ms | ActiveRecord: 0.5ms | Allocations: 7318)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:06:28 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 34.0ms | Allocations: 1278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 73.6ms | Allocations: 6092)
+Completed 200 OK in 90ms (Views: 87.2ms | ActiveRecord: 0.3ms | Allocations: 7311)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:06:41 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 29.1ms | Allocations: 1279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.8ms | Allocations: 6093)
+Completed 200 OK in 75ms (Views: 71.2ms | ActiveRecord: 0.2ms | Allocations: 7312)
+
+
+Started GET "/studies/3/edit" for ::1 at 2021-01-15 23:07:00 +0900
+Processing by StudiesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mCACHE Study Load (0.1ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/edit.html.erb within layouts/application
+  Rendered studies/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 643)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 5296)
+Completed 200 OK in 83ms (Views: 57.4ms | ActiveRecord: 0.3ms | Allocations: 6862)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:07:04 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.2ms | Allocations: 5633)
+Completed 200 OK in 58ms (Views: 57.3ms | ActiveRecord: 0.2ms | Allocations: 6052)
+
+
+Started DELETE "/studies/3" for ::1 at 2021-01-15 23:07:07 +0900
+Processing by StudiesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/studies_controller.rb:67:in `destroy'
+  [1m[36mStudy Destroy (1.8ms)[0m  [1m[31mDELETE FROM "studies" WHERE "studies"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/studies_controller.rb:67:in `destroy'
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/studies_controller.rb:67:in `destroy'
+Redirected to http://localhost:3000/studies
+Completed 302 Found in 62ms (ActiveRecord: 12.4ms | Allocations: 2643)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:07:07 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 907)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.0ms | Allocations: 5552)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.5ms | Allocations: 5975)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 23:07:13 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 598)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.1ms | Allocations: 5237)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.0ms | Allocations: 5767)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 23:08:06 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 594)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 5407)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.0ms | Allocations: 6614)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:08:09 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 1195)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.4ms | Allocations: 5837)
+Completed 200 OK in 64ms (Views: 58.6ms | ActiveRecord: 0.2ms | Allocations: 6385)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 23:08:20 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | Allocations: 5011)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.0ms | Allocations: 5416)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:08:24 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 905)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.8ms | Allocations: 5550)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.3ms | Allocations: 5971)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:08:48 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 905)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.2ms | Allocations: 5550)
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.6ms | Allocations: 5968)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 23:08:50 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 370)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.3ms | Allocations: 5009)
+Completed 200 OK in 49ms (Views: 48.6ms | ActiveRecord: 0.0ms | Allocations: 5413)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:11:28 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 23.8ms | Allocations: 1139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 57.7ms | Allocations: 5959)
+Completed 200 OK in 71ms (Views: 65.9ms | ActiveRecord: 0.3ms | Allocations: 7187)
+
+
+Started GET "/studies/edit" for ::1 at 2021-01-15 23:11:31 +0900
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+Completed 404 Not Found in 12ms (ActiveRecord: 0.3ms | Allocations: 1118)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Study with 'id'=edit):
+  
+app/controllers/studies_controller.rb:77:in `set_study'
+Started GET "/studies" for ::1 at 2021-01-15 23:11:43 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 870)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.8ms | Allocations: 5515)
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 0.5ms | Allocations: 5934)
+
+
+Started GET "/studies/edit" for ::1 at 2021-01-15 23:19:07 +0900
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+Completed 404 Not Found in 23ms (ActiveRecord: 0.9ms | Allocations: 1733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Study with 'id'=edit):
+  
+app/controllers/studies_controller.rb:77:in `set_study'
+Started GET "/studies" for ::1 at 2021-01-15 23:19:13 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 29.5ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 73.5ms | Allocations: 6013)
+Completed 200 OK in 82ms (Views: 79.1ms | ActiveRecord: 0.3ms | Allocations: 7240)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-15 23:19:18 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 594)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.7ms | Allocations: 5233)
+Completed 200 OK in 58ms (Views: 54.8ms | ActiveRecord: 0.0ms | Allocations: 5764)
+
+
+Started POST "/studies" for ::1 at 2021-01-15 23:19:32 +0900
+Processing by StudiesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "study"=>{"date"=>"2020-11-4", "title"=>"java", "memo"=>"ｋひおｋｆ", "status"=>"87"}, "commit"=>"保存する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mStudy Create (0.9ms)[0m  [1m[32mINSERT INTO "studies" ("date", "title", "memo", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["date", "2020-11-04"], ["title", "java"], ["memo", "ｋひおｋｆ"], ["status", 87], ["created_at", "2021-01-15 14:19:32.257475"], ["updated_at", "2021-01-15 14:19:32.257475"]]
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mTRANSACTION (10.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+Redirected to http://localhost:3000/studies/5
+Completed 302 Found in 34ms (ActiveRecord: 11.6ms | Allocations: 2548)
+
+
+Started GET "/studies/5" for ::1 at 2021-01-15 23:19:32 +0900
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+Redirected to http://localhost:3000/studies#index
+Completed 302 Found in 21ms (ActiveRecord: 0.3ms | Allocations: 794)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:19:32 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 996)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 63.7ms | Allocations: 5635)
+Completed 200 OK in 68ms (Views: 66.1ms | ActiveRecord: 0.6ms | Allocations: 6059)
+
+
+Started DELETE "/studies/5" for ::1 at 2021-01-15 23:19:41 +0900
+Processing by StudiesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"5"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/studies_controller.rb:67:in `destroy'
+  [1m[36mStudy Destroy (8.1ms)[0m  [1m[31mDELETE FROM "studies" WHERE "studies"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/studies_controller.rb:67:in `destroy'
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/studies_controller.rb:67:in `destroy'
+Redirected to http://localhost:3000/studies
+Completed 302 Found in 69ms (ActiveRecord: 18.0ms | Allocations: 2635)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:19:41 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 907)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.7ms | Allocations: 5546)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.5ms | Allocations: 5969)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:20:33 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 29.8ms | Allocations: 1222)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 71.0ms | Allocations: 6036)
+Completed 200 OK in 81ms (Views: 78.3ms | ActiveRecord: 0.4ms | Allocations: 7255)
+
+
+Started POST "/studies/1" for ::1 at 2021-01-15 23:20:36 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/studies/1"):
+  
+Started GET "/studies" for ::1 at 2021-01-15 23:20:45 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:17
+  Rendered studies/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 942)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.2ms | Allocations: 5588)
+Completed 200 OK in 69ms (Views: 67.3ms | ActiveRecord: 0.4ms | Allocations: 6004)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:36:19 +0900
+Processing by StudiesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:18
+  Rendered studies/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 1227)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 202.9ms | Allocations: 21133)
+Completed 200 OK in 234ms (Views: 213.3ms | ActiveRecord: 0.9ms | Allocations: 22959)
+
+
+Started GET "/img/simpleoffice.jpg" for ::1 at 2021-01-15 23:36:20 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/img/simpleoffice.jpg"):
+  
+Started GET "/studies" for ::1 at 2021-01-15 23:41:34 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:18
+  Rendered studies/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 942)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 161.2ms | Allocations: 20575)
+Completed 200 OK in 168ms (Views: 164.7ms | ActiveRecord: 0.5ms | Allocations: 20991)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:41:35 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:18
+  Rendered studies/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 5585)
+Completed 200 OK in 64ms (Views: 62.7ms | ActiveRecord: 0.3ms | Allocations: 6003)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:48:11 +0900
+Processing by StudiesController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:18
+  Rendered studies/index.html.erb within layouts/application (Duration: 35.2ms | Allocations: 1227)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 80.1ms | Allocations: 6046)
+Completed 200 OK in 109ms (Views: 89.5ms | ActiveRecord: 0.8ms | Allocations: 7872)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:50:40 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 165.5ms | Allocations: 19670)
+Completed 200 OK in 177ms (Views: 174.1ms | ActiveRecord: 0.3ms | Allocations: 20889)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/simpleoffice.jpg"):
+  
+Started GET "/studies" for ::1 at 2021-01-15 23:50:42 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.6ms | Allocations: 5578)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.3ms | Allocations: 5994)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:50:43 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 922)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 65.0ms | Allocations: 5566)
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.4ms | Allocations: 5981)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:50:43 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 922)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 7881)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.3ms | Allocations: 8296)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:50:43 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.8ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 922)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 8023)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.8ms | Allocations: 8438)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:50:43 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 922)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 72.6ms | Allocations: 8001)
+Completed 200 OK in 88ms (Views: 86.8ms | ActiveRecord: 0.5ms | Allocations: 8490)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:50:44 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.7ms | Allocations: 8078)
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.3ms | Allocations: 8493)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:50:44 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 922)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 65.5ms | Allocations: 8078)
+Completed 200 OK in 69ms (Views: 68.3ms | ActiveRecord: 0.3ms | Allocations: 8496)
+
+
+Started GET "/studies" for ::1 at 2021-01-15 23:50:44 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 922)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.9ms | Allocations: 5594)
+Completed 200 OK in 64ms (Views: 63.2ms | ActiveRecord: 0.2ms | Allocations: 6012)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:09:58 +0900
+Processing by StudiesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 922)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 204.4ms | Allocations: 20107)
+Completed 200 OK in 220ms (Views: 207.7ms | ActiveRecord: 1.4ms | Allocations: 21123)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/appssetsimagessimpleoffice.jpg"):
+  
+Started DELETE "/studies/1" for ::1 at 2021-01-16 00:10:19 +0900
+Processing by StudiesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/studies_controller.rb:67:in `destroy'
+  [1m[36mStudy Destroy (7.1ms)[0m  [1m[31mDELETE FROM "studies" WHERE "studies"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/studies_controller.rb:67:in `destroy'
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/studies_controller.rb:67:in `destroy'
+Redirected to http://localhost:3000/studies
+Completed 302 Found in 70ms (ActiveRecord: 19.6ms | Allocations: 2651)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:10:20 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 824)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 5475)
+Completed 200 OK in 69ms (Views: 67.7ms | ActiveRecord: 0.3ms | Allocations: 5898)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/appssetsimagessimpleoffice.jpg"):
+  
+Started GET "/studies/new" for ::1 at 2021-01-16 00:10:23 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 594)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.8ms | Allocations: 5244)
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.0ms | Allocations: 5782)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:10:25 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 824)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.4ms | Allocations: 5468)
+Completed 200 OK in 66ms (Views: 64.6ms | ActiveRecord: 0.3ms | Allocations: 5898)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:11:27 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 160.1ms | Allocations: 19576)
+Completed 200 OK in 165ms (Views: 163.7ms | ActiveRecord: 0.3ms | Allocations: 19999)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/appssetsimagessimpleoffice.jpg"):
+  
+Started GET "/studies" for ::1 at 2021-01-16 00:11:28 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 821)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.3ms | Allocations: 5471)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.3ms | Allocations: 5894)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-16 00:13:36 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 370)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 5013)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.0ms | Allocations: 5425)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:13:39 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.9ms | Allocations: 5466)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.5ms | Allocations: 5889)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:14:01 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 170.0ms | Allocations: 19602)
+Completed 200 OK in 174ms (Views: 173.3ms | ActiveRecord: 0.2ms | Allocations: 20028)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:14:22 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 171.3ms | Allocations: 20457)
+Completed 200 OK in 175ms (Views: 173.6ms | ActiveRecord: 0.6ms | Allocations: 20883)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:14:23 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.4ms | Allocations: 5466)
+Completed 200 OK in 64ms (Views: 62.3ms | ActiveRecord: 0.5ms | Allocations: 5889)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:14:24 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 5472)
+Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 0.4ms | Allocations: 5898)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:14:25 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.2ms | Allocations: 5466)
+Completed 200 OK in 69ms (Views: 67.9ms | ActiveRecord: 0.5ms | Allocations: 5892)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:14:25 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 63.9ms | Allocations: 7912)
+Completed 200 OK in 68ms (Views: 66.6ms | ActiveRecord: 0.3ms | Allocations: 8407)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:15:16 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 145.3ms | Allocations: 20496)
+Completed 200 OK in 147ms (Views: 145.8ms | ActiveRecord: 0.2ms | Allocations: 20919)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:15:17 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 5467)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.2ms | Allocations: 5893)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:16:32 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 1102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 150.4ms | Allocations: 20986)
+Completed 200 OK in 159ms (Views: 156.6ms | ActiveRecord: 0.4ms | Allocations: 22219)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:16:50 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 829)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 148.5ms | Allocations: 20024)
+Completed 200 OK in 150ms (Views: 149.1ms | ActiveRecord: 0.2ms | Allocations: 20451)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:16:51 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 5470)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.3ms | Allocations: 5893)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:18:30 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 153.1ms | Allocations: 20468)
+Completed 200 OK in 155ms (Views: 153.5ms | ActiveRecord: 0.2ms | Allocations: 20894)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:18:46 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 1102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.2ms | Allocations: 5925)
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 0.2ms | Allocations: 7161)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:27:09 +0900
+Processing by StudiesController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/studies_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 829)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 139.4ms | Allocations: 19589)
+Completed 200 OK in 144ms (Views: 140.0ms | ActiveRecord: 0.5ms | Allocations: 20617)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:29:02 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 139.1ms | Allocations: 19590)
+Completed 200 OK in 141ms (Views: 139.8ms | ActiveRecord: 0.2ms | Allocations: 20016)
+
+
+Started POST "/studies/4" for ::1 at 2021-01-16 00:29:11 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/studies/4"):
+  
+Started GET "/studies" for ::1 at 2021-01-16 00:29:14 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 821)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 5470)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.2ms | Allocations: 5893)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-16 00:29:19 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 5249)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms | Allocations: 5790)
+
+
+Started POST "/studies" for ::1 at 2021-01-16 00:30:57 +0900
+Processing by StudiesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "study"=>{"date"=>"2021-1-16", "title"=>"css", "memo"=>"学習記録アプリの背景色や背景画像を色々と変えようとしたがあまりうまくいかなかった。しかも編集リンクをいじってしまい、編集項目が使えなくなってしまった。", "status"=>"50"}, "commit"=>"保存する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mStudy Create (0.8ms)[0m  [1m[32mINSERT INTO "studies" ("date", "title", "memo", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["date", "2021-01-16"], ["title", "css"], ["memo", "学習記録アプリの背景色や背景画像を色々と変えようとしたがあまりうまくいかなかった。しかも編集リンクをいじってしまい、編集項目が使えなくなってしまった。"], ["status", 50], ["created_at", "2021-01-15 15:30:57.928581"], ["updated_at", "2021-01-15 15:30:57.928581"]]
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+Redirected to http://localhost:3000/studies/6
+Completed 302 Found in 20ms (ActiveRecord: 8.2ms | Allocations: 2554)
+
+
+Started GET "/studies/6" for ::1 at 2021-01-16 00:30:57 +0900
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+Redirected to http://localhost:3000/studies#index
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 814)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 00:30:58 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 926)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 5575)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.3ms | Allocations: 5999)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 22:25:04 +0900
+  [1m[35m (11.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 5246)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 439.2ms | Allocations: 24031)
+Completed 200 OK in 540ms (Views: 471.2ms | ActiveRecord: 0.8ms | Allocations: 27048)
+
+
+Started GET "/studies/new" for ::1 at 2021-01-16 22:25:09 +0900
+Processing by StudiesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/new.html.erb within layouts/application
+  Rendered studies/new.html.erb within layouts/application (Duration: 33.3ms | Allocations: 840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 72.6ms | Allocations: 5491)
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.0ms | Allocations: 6056)
+
+
+Started POST "/studies" for ::1 at 2021-01-16 22:26:10 +0900
+Processing by StudiesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "study"=>{"date"=>"2021-1-16", "title"=>"python", "memo"=>"pythonの基本構文、サイコロゲームの作成を行った。", "status"=>"80"}, "commit"=>"保存する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mStudy Create (1.1ms)[0m  [1m[32mINSERT INTO "studies" ("date", "title", "memo", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["date", "2021-01-16"], ["title", "python"], ["memo", "pythonの基本構文、サイコロゲームの作成を行った。"], ["status", 80], ["created_at", "2021-01-16 13:26:10.710284"], ["updated_at", "2021-01-16 13:26:10.710284"]]
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/studies_controller.rb:40:in `block in create'
+Redirected to http://localhost:3000/studies/7
+Completed 302 Found in 26ms (ActiveRecord: 9.4ms | Allocations: 2807)
+
+
+Started GET "/studies/7" for ::1 at 2021-01-16 22:26:10 +0900
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:77:in `set_study'
+Redirected to http://localhost:3000/studies#index
+Completed 302 Found in 51ms (ActiveRecord: 0.2ms | Allocations: 3814)
+
+
+Started GET "/studies" for ::1 at 2021-01-16 22:26:10 +0900
+Processing by StudiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT "studies".* FROM "studies" ORDER BY date asc[0m
+  ↳ app/views/studies/index.html.erb:16
+  Rendered studies/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1022)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 5671)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.2ms | Allocations: 6099)
+
+
