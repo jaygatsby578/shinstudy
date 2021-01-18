@@ -226,22 +226,22 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise
   font-awesome-sass
-  jbuilder (~> 2.7)
+  jbuilder
   pg
-  puma (~> 5.0)
+  puma
   rack-mini-profiler (~> 2.0)
-  rails (~> 6.1.1)
-  sass-rails (>= 6)
+  rails
+  sass-rails
   selenium-webdriver
   sqlite3 (~> 1.4)
-  turbolinks (~> 5)
+  turbolinks
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
-  webpacker (~> 5.0)
+  webpacker
 
 RUBY VERSION
    ruby 3.0.0p0
 
 BUNDLED WITH
-   2.2.3
+   2.2.5

@@ -3974,3 +3974,17 @@ Processing by HelloController#index as HTML
 Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.0ms | Allocations: 7565)
 
 
+Started GET "/" for 127.0.0.1 at 2021-01-18 18:25:55 +0000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 306)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 140)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 266.0ms | Allocations: 29248)
+Completed 200 OK in 305ms (Views: 285.9ms | ActiveRecord: 0.0ms | Allocations: 32581)
+
+
